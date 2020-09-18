@@ -13,14 +13,39 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('vsc-hyperlink.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from vsc_hyperlink!');
+	let disposable = vscode.commands.registerCommand('vsc-hyperlink.helloWorld', () => 
+	{
+		vscode.window.showInformationMessage("Hyperlink activated");	
 	});
 
 	context.subscriptions.push(disposable);
+
+	vscode.languages.registerHoverProvider('*', {
+		provideHover(document, position, token) {
+			const line = document.lineAt(position);
+			const config = vscode.workspace.getConfiguration().get("config.array");
+			let pattern;
+			let text: string = "";
+			for (let i = 0; i < config.length; i++){
+				pattern = new RegExp(config[i].match_pattern, 'g');
+				let match = pattern.exec(line.text);
+				while (match) {
+					text += config[i].prefix+match[0];
+					
+					match = pattern.exec(line.text);
+					if (match){
+						text += " \|\| ";
+					}
+				}
+			}
+
+            if (text.length > 0) {	
+                return new vscode.Hover(
+					text
+				);
+            }
+        }
+	});
 }
 
 // this method is called when your extension is deactivated

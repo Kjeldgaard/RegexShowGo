@@ -19,6 +19,36 @@
 				"command": "vsc-hyperlink.helloWorld",
 				"title": "Hello World"
 			}
+		],
+		"configuration": [
+			{
+				"type": "object",
+				"title": "VSC Hyperlink",
+				"properties": {
+					"config.match": {
+						"type": "string",
+						"default": "default string",
+						"description": "Regex match pattern"
+					},
+					"config.array": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"match_pattern": {
+									"type": "string",
+									"description": "match of inner object"
+								},
+								"prefix": {
+									"type": "string",
+									"description": "prefix of inner object"
+								}
+							}
+						},
+						"default": ["a", "b"]
+					}
+				}
+			}
 		]
 	},
 	"scripts": {
