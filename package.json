@@ -1,6 +1,6 @@
 {
-	"name": "vsc-hyperlink",
-	"displayName": "vsc_hyperlink",
+	"name": "regex_show_go",
+	"displayName": "RegexShowGo",
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
@@ -10,27 +10,22 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:vsc-hyperlink.helloWorld"
+		"onCommand:RegexShowGo"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vsc-hyperlink.helloWorld",
-				"title": "Hello World"
+				"command": "RegexShowGo",
+				"title": "Regex Show Go"
 			}
 		],
 		"configuration": [
 			{
 				"type": "object",
-				"title": "VSC Hyperlink",
+				"title": "Regex Show Go",
 				"properties": {
-					"config.match": {
-						"type": "string",
-						"default": "default string",
-						"description": "Regex match pattern"
-					},
-					"config.array": {
+					"regex_show_go.config.match": {
 						"type": "array",
 						"items": {
 							"type": "object",
@@ -44,8 +39,7 @@
 									"description": "prefix of inner object"
 								}
 							}
-						},
-						"default": ["a", "b"]
+						}
 					}
 				}
 			}
