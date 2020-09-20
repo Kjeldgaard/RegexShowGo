@@ -1,8 +1,9 @@
 {
-	"name": "regex_show_go",
-	"displayName": "RegexShowGo",
+	"name": "regexshowgo",
+	"displayName": "Regex Show Go",
+	"publisher": "Kjeldgaard",
 	"description": "",
-	"version": "0.0.1",
+	"version": "0.1.1",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -12,7 +13,7 @@
 	"activationEvents": [
 		"onCommand:RegexShowGo"
 	],
-	"main": "./out/extension.js",
+	"main": "./dist/extension",
 	"contributes": {
 		"commands": [
 			{
@@ -46,24 +47,34 @@
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "npm run compile",
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
 		"compile": "tsc -p ./",
 		"lint": "eslint src --ext ts",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js"
+		"test": "node ./out/test/runTest.js",
+		"test-compile": "tsc -p ./"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.46.0",
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.2",
 		"@types/node": "^13.11.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.30.0",
+		"@types/vscode": "^1.46.0",
 		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
 		"mocha": "^7.1.2",
+		"ts-loader": "^8.0.4",
 		"typescript": "^3.8.3",
-		"vscode-test": "^1.3.0"
+		"vscode-test": "^1.3.0",
+		"webpack": "^4.44.2",
+		"webpack-cli": "^3.3.12"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Kjeldgaard/RegexShowGo"
 	}
 }

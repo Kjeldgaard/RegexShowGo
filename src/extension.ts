@@ -20,13 +20,11 @@ export function activate(context: vscode.ExtensionContext) {
 		provideHover(document, position, token) {
 			// Get line text
 			const line = document.lineAt(position);
-
-			// Get regex match pattern from configuration
-			const config = vscode.workspace.getConfiguration().get("regex_show_go.config.match");
+			const config: {[index: string]:any} = vscode.workspace.getConfiguration().get("regex_show_go.config.match") || {};			
 			let text: string = "";
 
 			// Search for regex match pattern in line text
-			for (let i = 0; i < config.length; i++){
+			for (let i = 0; i < Object.keys(config).length; i++){
 				let pattern = new RegExp(config[i].match_pattern, 'g');
 				
 				// If match found, store match prefix and match
