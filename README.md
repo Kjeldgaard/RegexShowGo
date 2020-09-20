@@ -20,6 +20,15 @@ To use the extension, you must configure a regex match pattern and a match prefi
 If a line contains the word "WIKI-123", the following link is generated "https://duckduckgo.com/?q=WIKI-123" when hovering the line.
 
 ## Release Notes
+#### Version 0.1.2
+Fix version numbering.
+
+#### Version 0.1.1
+Updated README.md
+
+#### Version 0.1.0
+Updated extension to meet Marketplace requirements.
+
 #### Version 0.0.1
 Initial version with basic regex search, match and generate url link.
 
