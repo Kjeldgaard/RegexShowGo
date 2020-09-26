@@ -80,5 +80,6 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Kjeldgaard/RegexShowGo"
-	}
+	},
+	"icon": "domain.png"
 }
