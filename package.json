@@ -33,11 +33,15 @@
 							"properties": {
 								"match_pattern": {
 									"type": "string",
-									"description": "match of inner object"
+									"description": "match string"
 								},
 								"prefix": {
 									"type": "string",
-									"description": "prefix of inner object"
+									"description": "prefix"
+								},
+								"postfix": {
+									"type": "string",
+									"description": "postfix"
 								}
 							}
 						}

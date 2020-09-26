@@ -1,9 +1,12 @@
 # Change Log
+#### Version 0.1.2
+Fix version numbering.
 
-All notable changes to the "vsc-hyperlink" extension will be documented in this file.
+#### Version 0.1.1
+Updated README.md
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+#### Version 0.1.0
+Updated extension to meet Marketplace requirements.
 
-## [Unreleased]
-
-- Initial release
+#### Version 0.0.1
+Initial version with basic regex search, match and generate url link.

@@ -17,24 +17,28 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// Execute when hovering over line
 	vscode.languages.registerHoverProvider('*', {
-		provideHover(document, position, token) {
+		provideHover(document, position, token) 
+		{
 			// Get line text
 			const line = document.lineAt(position);
-			const config: {[index: string]:any} = vscode.workspace.getConfiguration().get("regex_show_go.config.match") || {};			
+			const config: {[index: string]:any} = vscode.workspace.getConfiguration().get("regex_show_go.config.match") || {};
 			let text: string = "";
 
 			// Search for regex match pattern in line text
-			for (let i = 0; i < Object.keys(config).length; i++){
+			for (let i = 0; i < Object.keys(config).length; i++)
+			{
 				let pattern = new RegExp(config[i].match_pattern, 'g');
 				
 				// If match found, store match prefix and match
 				let match = pattern.exec(line.text);
-				while (match) {
+				while (match) 
+				{
 					// Store match, add separator if not the first match
-					if (text.length > 0){
+					if (text.length > 0)
+					{
 						text += " \|\| ";
 					}
-					text += config[i].prefix + match[0];
+					text += config[i].prefix + match[0] + config[i].postfix;
 					
 					// Get next match
 					match = pattern.exec(line.text);
@@ -42,10 +46,9 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 
 			// Display match text in hover
-            if (text.length > 0) {	
-                return new vscode.Hover(
-					text
-				);
+			if (text.length > 0) 
+			{	
+                return new vscode.Hover(text);
             }
         }
 	});
