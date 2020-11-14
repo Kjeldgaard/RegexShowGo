@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.0
+- [Feature] Possibility to leave match out of the generated URL.
+
 #### Version 0.2.0
 - [breaking change] Added 'postfix' string. Update extension configuration with 'postfix' field
 - Added icon.

@@ -3,7 +3,7 @@
 	"displayName": "Regex Show Go",
 	"publisher": "Kjeldgaard",
 	"description": "",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -42,6 +42,10 @@
 								"postfix": {
 									"type": "string",
 									"description": "postfix"
+								},
+								"search_at": {
+									"type": "boolean",
+									"description": "search_at site"
 								}
 							}
 						}

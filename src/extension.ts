@@ -27,10 +27,23 @@ export function activate(context: vscode.ExtensionContext) {
 			// Search for regex match pattern in line text
 			for (let i = 0; i < Object.keys(config).length; i++)
 			{
-				let pattern = new RegExp(config[i].match_pattern, 'g');
+				let pattern;
+				let match;
+				let search_at = !(typeof config[i].search_at === "undefined") && config[i].search_at === true;
 				
-				// If match found, store match prefix and match
-				let match = pattern.exec(line.text);
+				if (search_at)
+				{
+					// If match found, store match prefix and match
+					pattern = new RegExp(config[i].match_pattern + "#?([^#]+)#", 'g');
+					match = pattern.exec(line.text);
+				}
+				else
+				{
+					// If match found, store match prefix and match
+					pattern = new RegExp(config[i].match_pattern, 'g');
+					match = pattern.exec(line.text);	
+				}
+
 				while (match) 
 				{
 					// Store match, add separator if not the first match
@@ -38,7 +51,15 @@ export function activate(context: vscode.ExtensionContext) {
 					{
 						text += " \|\| ";
 					}
-					text += config[i].prefix + match[0] + config[i].postfix;
+					if (search_at)
+					{
+						text += config[i].prefix + match[1] + config[i].postfix;
+					}
+					else
+					{
+						text += config[i].prefix + match[0] + config[i].postfix;
+					}
+					
 					
 					// Get next match
 					match = pattern.exec(line.text);
