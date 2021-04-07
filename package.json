@@ -86,7 +86,5 @@
 		"url": "https://github.com/Kjeldgaard/RegexShowGo"
 	},
 	"icon": "domain.png",
-	"dependencies": {
-		"audit": "0.0.6"
-	}
+	"dependencies": {}
 }
