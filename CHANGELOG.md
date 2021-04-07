@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.1
+- Security fixes. No functional changes.
+
 #### Version 1.0.0
 - [Feature] Possibility to leave match out of the generated URL.
 
