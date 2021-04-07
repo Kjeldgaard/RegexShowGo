@@ -3,7 +3,7 @@
 	"displayName": "Regex Show Go",
 	"publisher": "Kjeldgaard",
 	"description": "",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -87,7 +87,6 @@
 	},
 	"icon": "domain.png",
 	"dependencies": {
-		"audit": "0.0.6",
-		"fix": "0.0.6"
+		"audit": "0.0.6"
 	}
 }

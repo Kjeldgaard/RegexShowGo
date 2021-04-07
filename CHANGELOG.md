@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.3
+- Fix underscore.sting vulnerability: https://github.com/advisories/GHSA-v2p6-4mp7-3r9v
+
 #### Version 1.0.2
 - Fix SSRI vulnerability: https://github.com/advisories/GHSA-vx3p-948g-6vhq
 
