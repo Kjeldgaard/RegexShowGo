@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.2
+- Fix SSRI vulnerability: https://github.com/advisories/GHSA-vx3p-948g-6vhq
+
 #### Version 1.0.1
 - Security fixes. No functional changes.
 

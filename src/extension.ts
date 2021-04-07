@@ -17,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// Execute when hovering over line
 	vscode.languages.registerHoverProvider('*', {
-		provideHover(document, position, token) 
+		provideHover(document, position, token)
 		{
 			// Get line text
 			const line = document.lineAt(position);
@@ -30,7 +30,7 @@ export function activate(context: vscode.ExtensionContext) {
 				let pattern;
 				let match;
 				let search_at = !(typeof config[i].search_at === "undefined") && config[i].search_at === true;
-				
+
 				if (search_at)
 				{
 					// If match found, store match prefix and match
@@ -41,10 +41,10 @@ export function activate(context: vscode.ExtensionContext) {
 				{
 					// If match found, store match prefix and match
 					pattern = new RegExp(config[i].match_pattern, 'g');
-					match = pattern.exec(line.text);	
+					match = pattern.exec(line.text);
 				}
 
-				while (match) 
+				while (match)
 				{
 					// Store match, add separator if not the first match
 					if (text.length > 0)
@@ -59,16 +59,16 @@ export function activate(context: vscode.ExtensionContext) {
 					{
 						text += config[i].prefix + match[0] + config[i].postfix;
 					}
-					
-					
+
+
 					// Get next match
 					match = pattern.exec(line.text);
 				}
 			}
 
 			// Display match text in hover
-			if (text.length > 0) 
-			{	
+			if (text.length > 0)
+			{
                 return new vscode.Hover(text);
             }
         }
