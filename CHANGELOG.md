@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.4
+- Fix vulnerability: Bump lodash from 4.17.19 to 4.17.21
+
 #### Version 1.0.3
 - Fix underscore.sting vulnerability: https://github.com/advisories/GHSA-v2p6-4mp7-3r9v
 
