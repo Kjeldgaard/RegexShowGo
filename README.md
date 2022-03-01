@@ -30,6 +30,9 @@ Example 2:
 Hovering a line containing the text "WIKI#test#", will generate the following link "https://en.wikipedia.org/wiki/test". Note, "match_pattern" is not included in the generated URL.
 
 ## Release Notes
+#### Version 1.0.5
+- Fix vulnerabilities.
+
 #### Version 1.0.4
 - Fix vulnerability: Bump lodash from 4.17.19 to 4.17.21
 

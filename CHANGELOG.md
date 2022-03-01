@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.5
+- Fix vulnerabilities.
+
 #### Version 1.0.4
 - Fix vulnerability: Bump lodash from 4.17.19 to 4.17.21
 
