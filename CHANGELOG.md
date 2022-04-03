@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.6
+- Updated minimist, https://github.com/advisories/GHSA-xvch-5gv4-984h
+
 #### Version 1.0.5
 - Fix vulnerabilities.
 
