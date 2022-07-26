@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.7
+- Fix vulnerbility, bump Terser to 5.14.2
+
 #### Version 1.0.6
 - Updated minimist, https://github.com/advisories/GHSA-xvch-5gv4-984h
 

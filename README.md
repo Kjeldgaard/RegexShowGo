@@ -30,6 +30,9 @@ Example 2:
 Hovering a line containing the text "WIKI#test#", will generate the following link "https://en.wikipedia.org/wiki/test". Note, "match_pattern" is not included in the generated URL.
 
 ## Release Notes
+#### Version 1.0.7
+- Fix vulnerbility, bump Terser to 5.14.2
+
 #### Version 1.0.6
 - Updated minimist, https://github.com/advisories/GHSA-xvch-5gv4-984h
 
