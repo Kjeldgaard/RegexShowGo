@@ -29,6 +29,21 @@ Hovering a line containing the text "TEST-1234", will generate the following lin
 Example 2:
 Hovering a line containing the text "WIKI#test#", will generate the following link "https://en.wikipedia.org/wiki/test". Note, "match_pattern" is not included in the generated URL.
 
+## How to Build the Extension
+First install required packages
+```
+npm install
+```
+You can now build the extension
+```
+vsce package
+```
+And to release on Visual Code Marketplace
+```
+vsce publish
+```
+The latter requires a valid access token for the Marketplace.
+
 ## Release Notes
 #### Version 1.0.7
 - Fix vulnerbility, bump Terser to 5.14.2
