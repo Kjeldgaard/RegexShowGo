@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.8
+- Fix vulnerbilities
+
 #### Version 1.0.7
 - Fix vulnerbility, bump Terser to 5.14.2
 
