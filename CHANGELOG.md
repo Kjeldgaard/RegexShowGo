@@ -1,4 +1,7 @@
 # Change Log
+#### Version 1.0.9
+- Fix vulnerbilities
+
 #### Version 1.0.8
 - Fix vulnerbilities
 

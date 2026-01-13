@@ -1,90 +1,90 @@
 {
-	"name": "regexshowgo",
-	"displayName": "Regex Show Go",
-	"publisher": "Kjeldgaard",
-	"description": "",
-	"version": "1.0.8",
-	"engines": {
-		"vscode": "^1.46.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:RegexShowGo"
-	],
-	"main": "./dist/extension",
-	"contributes": {
-		"commands": [
-			{
-				"command": "RegexShowGo",
-				"title": "Regex Show Go"
-			}
-		],
-		"configuration": [
-			{
-				"type": "object",
-				"title": "Regex Show Go",
-				"properties": {
-					"regex_show_go.config.match": {
-						"type": "array",
-						"items": {
-							"type": "object",
-							"properties": {
-								"match_pattern": {
-									"type": "string",
-									"description": "match string"
-								},
-								"prefix": {
-									"type": "string",
-									"description": "prefix"
-								},
-								"postfix": {
-									"type": "string",
-									"description": "postfix"
-								},
-								"search_at": {
-									"type": "boolean",
-									"description": "search_at site"
-								}
-							}
-						}
-					}
-				}
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "webpack --mode production",
-		"webpack": "webpack --mode development",
-		"webpack-dev": "webpack --mode development --watch",
-		"compile": "tsc -p ./",
-		"lint": "eslint src --ext ts",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js",
-		"test-compile": "tsc -p ./"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^7.0.2",
-		"@types/node": "^13.11.0",
-		"@types/vscode": "^1.46.0",
-		"@typescript-eslint/eslint-plugin": "^2.30.0",
-		"@typescript-eslint/parser": "^2.30.0",
-		"eslint": "^8.10.0",
-		"glob": "^7.1.6",
-		"mocha": "^11.7.1",
-		"ts-loader": "^8.1.0",
-		"typescript": "^3.8.3",
-		"vscode-test": "^1.3.0",
-		"webpack": "^5.94.0",
-		"webpack-cli": "^4.9.2"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Kjeldgaard/RegexShowGo"
-	},
-	"icon": "domain.png",
-	"dependencies": {}
+  "name": "regexshowgo",
+  "displayName": "Regex Show Go",
+  "publisher": "Kjeldgaard",
+  "description": "",
+  "version": "1.0.9",
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:RegexShowGo"
+  ],
+  "main": "./dist/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "RegexShowGo",
+        "title": "Regex Show Go"
+      }
+    ],
+    "configuration": [
+      {
+        "type": "object",
+        "title": "Regex Show Go",
+        "properties": {
+          "regex_show_go.config.match": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "match_pattern": {
+                  "type": "string",
+                  "description": "match string"
+                },
+                "prefix": {
+                  "type": "string",
+                  "description": "prefix"
+                },
+                "postfix": {
+                  "type": "string",
+                  "description": "postfix"
+                },
+                "search_at": {
+                  "type": "boolean",
+                  "description": "search_at site"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "webpack --mode production",
+    "webpack": "webpack --mode development",
+    "webpack-dev": "webpack --mode development --watch",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js",
+    "test-compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "@types/vscode": "^1.46.0",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "eslint": "^8.10.0",
+    "glob": "^7.1.6",
+    "mocha": "^11.7.1",
+    "ts-loader": "^8.1.0",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kjeldgaard/RegexShowGo"
+  },
+  "icon": "domain.png",
+  "dependencies": {}
 }
