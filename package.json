@@ -3,7 +3,7 @@
   "displayName": "Regex Show Go",
   "publisher": "Kjeldgaard",
   "description": "",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "engines": {
     "vscode": "^1.46.0"
   },
@@ -70,15 +70,17 @@
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
     "@types/vscode": "^1.46.0",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
-    "@typescript-eslint/parser": "^2.30.0",
-    "eslint": "^8.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.00.0",
+    "@typescript-eslint/parser": "^8.00.0",
+    "eslint": "^9.0.0",
     "glob": "^7.1.6",
-    "mocha": "^11.7.1",
+    "mocha": "^11.3.0",
+    "serialize-javascript": "^7.0.3",
+    "terser-webpack-plugin": "^5.3.16",
     "ts-loader": "^8.1.0",
-    "typescript": "^3.8.3",
+    "typescript": "^5.0.0",
     "vscode-test": "^1.3.0",
-    "webpack": "^5.105.0",
+    "webpack": "^5.105.3",
     "webpack-cli": "^4.9.2"
   },
   "repository": {
@@ -86,5 +88,7 @@
     "url": "https://github.com/Kjeldgaard/RegexShowGo"
   },
   "icon": "domain.png",
-  "dependencies": {}
+  "dependencies": {
+    "diff": "^8.0.3"
+  }
 }
